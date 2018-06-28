@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/file.json",
+	"description": "Ad",
+	"type": "object",
+	"additionalProperties": {},
+	"oneOf": [
+		{
+			"type": "string"
+		},
+		{
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/s3Source.json"
+		}
+	]
+}

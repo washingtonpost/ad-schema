@@ -1,0 +1,59 @@
+{
+	"_id": "adEntry5",
+	"product": {
+		"type": "object",
+		"_id": "aProductName",
+		"adSlotsAvailable": [
+			{
+				"_id": "audioPreroll",
+				"name": "Audio Preroll",
+				"size": "30s",
+				"priority": 2
+			},
+			{
+				"_id": "audioPostroll",
+				"name": "Audio Post",
+				"size": "30s",
+				"priority": 5
+			}
+		]
+	},
+	"slotsTargeted": [
+		{
+			"_id": "audioPreroll",
+			"name": "Audio Preroll",
+			"size": "30s",
+			"priority": 2
+		}
+	],
+	"operations": [
+		{
+			"type": "audio",
+			"operation": "insert",
+			"date": "1529696474539",
+			"organization_id": "WashPost",
+			"results": [
+				{
+					"_id": "operation123",
+					"target": "podcastShowX",
+					"asset": "123assetId",
+					"status": true,
+					"fileWithAds": "http://yoursite.com/with-ads/file.mp3",
+					"fileWithoutAds": "http://yoursite.com/without-ads/file.mp3",
+					"localFileWithAds": "./files/file.mp3",
+					"distribution": [
+						"any"
+					],
+					"slots": [
+						{
+							"_id": "audioPreroll",
+							"name": "Audio Preroll",
+							"size": "30s",
+							"priority": 2
+						}
+					]
+				}
+			]
+		}
+	]
+}

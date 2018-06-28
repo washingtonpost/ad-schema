@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/creative.json",
+	"description": "Ad",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"_id": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+		},
+		"format": {
+			"type": "string",
+			"enum": [
+				"modular",
+				"file",
+				"adTag"
+			]
+		},
+		"assets": {
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/asset.json"
+			}
+		},
+		"source": {
+			"type": "string"
+		},
+		"intendedDevice": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"file": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/file.json",
+			"description": "Property used when creative is file format"
+		},
+		"excludedDevices": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"clickThroughUrl": {
+			"type": "string"
+		},
+		"adTag": {
+			"type": "string",
+			"description": "An HTML block that contains a pass through tag when creative is that format."
+		},
+		"priority": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/priority.json"
+		}
+	},
+	"required": [
+		"_id",
+		"format",
+		"intendedDevice"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/ad-targeting_operation.json",
+	"description": "Ad without ID to push targeting to an ad controller",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"version": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_version.json"
+		},
+		"adServerConfig": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/adServerConfig.json"
+		},
+		"creatives": {
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/creative.json"
+			}
+		},
+		"template": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/template.json"
+		},
+		"campaign": {
+			"type": "object",
+			"properties": {
+				"targeting": {
+					"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/targeting.json"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/ad-insertion_operation.json",
+	"description": "The return value of an operation that performs a dynamic ad insertion into a product",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"_id": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+		},
+		"product": {
+			"type": "object",
+			"_id": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+			},
+			"adSlotsAvailable": {
+				"type": "array",
+				"items": {
+					"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+				}
+			}
+		},
+		"slotsTargeted": {
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+			}
+		},
+		"operations": {
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/adOperationResult.json"
+			}
+		}
+	}
+}

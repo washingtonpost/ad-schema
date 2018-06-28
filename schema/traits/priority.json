@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/priority.json",
+	"title": "Priority trait",
+	"description": "A number to indicate the priority of a propery used in calculation for ad presentation. More is higher.",
+	"oneOf": [
+		{
+			"type": "number"
+		},
+		{
+			"type": "null"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/adTemplate.json",
+	"title": "Template trait",
+	"description": "Specifying an ad template for assets to be placed into.",
+	"properties": {
+		"productType": {
+			"type": "string"
+		},
+		"modules": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		}
+	},
+	"required": [
+		"productType"
+	]
+}

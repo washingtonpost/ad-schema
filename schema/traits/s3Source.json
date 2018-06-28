@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/s3Source.json",
+	"title": "Ad Server Configuration trait",
+	"type": "object",
+	"description": "A set of IDs used to tie an ad or ad operation to an ad server",
+	"additionalProperties": false,
+	"properties": {
+		"id": {
+			"type": "string"
+		},
+		"createdAt": {
+			"type": "number",
+			"description": "Unixtime in seconds"
+		},
+		"bucket": {
+			"type": "string"
+		},
+		"key": {
+			"type": "string"
+		},
+		"originalName": {
+			"type": "string"
+		},
+		"contentType": {
+			"oneOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "null"
+				}
+			]
+		},
+		"fileSize": {
+			"type": "number"
+		}
+	}
+}

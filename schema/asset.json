@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/asset.json",
+	"description": "Asset",
+	"type": "object",
+	"properties": {
+		"_id": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+		},
+		"type": {
+			"type": "string",
+			"enum": [
+				"image",
+				"video",
+				"audio",
+				"htmlDocument",
+				"captions",
+				"iframe",
+				"jsonList",
+				"socialData",
+				"rssFeed",
+				"calendarEvent",
+				"cta"
+			]
+		},
+		"templateComponent": {
+			"type": "string"
+		}
+	}
+}

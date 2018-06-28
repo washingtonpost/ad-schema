@@ -1,0 +1,70 @@
+{
+	"version": "0.6.2",
+	"adServerConfig": {
+		"lineItemID": "123lineItemID",
+		"campaignID": "123campaignID",
+		"creativeID": "123creativeID"
+	},
+	"creatives": [
+		{
+			"_id": "123assetId",
+			"format": "file",
+			"file": "http://oursite.com/audio/audiofile.mp3",
+			"source": "podcastCMS",
+			"intendedDevice": "any",
+			"priority": 5
+		}
+	],
+	"template": {
+		"productType": "preroll"
+	},
+	"campaign": {
+		"properties": {
+			"targeting": {
+				"products": [
+					{
+						"id": "podcastShowX",
+						"name": "The Podcast Show",
+						"parent": "",
+						"status": "active",
+						"shareOfVoice": 25,
+						"geotargeting": [
+							"US"
+						],
+						"startDate": "1529696444539",
+						"endDate": "1539696444539",
+						"slots": [
+							{
+								"_id": "audioPreroll",
+								"name": "Audio Preroll",
+								"size": "30s",
+								"priority": 2
+							},
+							{
+								"_id": "audioPostroll",
+								"name": "Audio Post",
+								"size": "30s",
+								"priority": 5
+							}
+						]
+					}
+				],
+				"keywords": [
+					"DMV",
+					"Driving"
+				],
+				"commercialNode": "news",
+				"exclusions": {
+					"keywords": [
+						"amtrak"
+					],
+					"articleIds": [],
+					"urls": [
+						"http://yoursite.com/a-disaster-article"
+					]
+				},
+				"priority": 20
+			}
+		}
+	}
+}

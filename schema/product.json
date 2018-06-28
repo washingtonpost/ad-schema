@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/product.json",
+	"description": "A booking of an editorial product that can be targeted by an ad",
+	"type": "object",
+	"additionalProperties": {},
+	"properties": {
+		"id": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"parent": {
+			"type": "string"
+		},
+		"status": {
+			"type": "string",
+			"enum": [
+				"active",
+				"inactive",
+				"draft",
+				"pitched"
+			]
+		},
+		"shareOfVoice": {
+			"type": "number",
+			"minimum": 0,
+			"maximum": 100
+		},
+		"geotargeting": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"startDate": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"endDate": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"slots": {
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+			}
+		}
+	}
+}

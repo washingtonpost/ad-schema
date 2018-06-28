@@ -1,0 +1,50 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/adServerConfig.json",
+	"title": "Ad Server Configuration trait",
+	"type": "object",
+	"description": "A set of IDs used to tie an ad or ad operation to an ad server",
+	"additionalProperties": false,
+	"properties": {
+		"lineItemID": {
+			"oneOf": [
+				{
+					"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+				},
+				{
+					"type": "boolean",
+					"enum": [
+						false
+					]
+				}
+			]
+		},
+		"campaignID": {
+			"oneOf": [
+				{
+					"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+				},
+				{
+					"type": "boolean",
+					"enum": [
+						false
+					]
+				}
+			]
+		},
+		"creativeID": {
+			"oneOf": [
+				{
+					"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+				},
+				{
+					"type": "boolean",
+					"enum": [
+						false
+					]
+				}
+			]
+		}
+	},
+	"required": []
+}

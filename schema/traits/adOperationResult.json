@@ -1,0 +1,82 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/adOperationResult.json",
+	"title": "The result of an ad operation",
+	"type": "object",
+	"description": "A set of IDs used to tie an ad or ad operation to an ad server",
+	"additionalProperties": false,
+	"properties": {
+		"type": {
+			"description": "Identifies this as an ANS operation",
+			"type": "string"
+		},
+		"operation": {
+			"type": "string",
+			"description": "The identifier of the operation being performed",
+			"enum": [
+				"insert",
+				"update",
+				"delete"
+			]
+		},
+		"date": {
+			"description": "When the operation should be considered performed",
+			"type": "string",
+			"format": "date-time"
+		},
+		"organization_id": {
+			"type": "string",
+			"description": "The id of the organization"
+		},
+		"results": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"_id": {
+						"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+					},
+					"target": {
+						"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json",
+						"description": "Product ID (inputFile)"
+					},
+					"asset": {
+						"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json",
+						"description": "Asset ID (Ad File)"
+					},
+					"status": {
+						"type": "boolean"
+					},
+					"fileWithAds": {
+						"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/file.json"
+					},
+					"fileWithoutAds": {
+						"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/file.json"
+					},
+					"localFileWithAds": {
+						"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/file.json"
+					},
+					"distribution": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"slots": {
+						"type": "array",
+						"items": {
+							"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+						}
+					}
+				},
+				"required": [
+					"_id",
+					"target",
+					"asset",
+					"result"
+				]
+			}
+		}
+	}
+}

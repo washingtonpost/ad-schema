@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json",
+	"title": "Priority trait",
+	"description": "Specifying an ad slot the ad is targeted against.",
+	"additionalProperties": false,
+	"properties": {
+		"_id": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+		},
+		"name": {
+			"type": "string"
+		},
+		"size": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"description": "Ad sizes per slot, could be 300x250 or 15s, dependent on system"
+			}
+		},
+		"priority": {
+			"oneOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "null"
+				}
+			]
+		}
+	}
+}
