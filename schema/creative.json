@@ -50,6 +50,16 @@
 		},
 		"priority": {
 			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/priority.json"
+		},
+		"valueBooked": {
+			"type": "number",
+			"multipleOf": 1.0,
+			"minimum": 0
+		},
+		"valueFulfilled": {
+			"type": "number",
+			"multipleOf": 1.0,
+			"minimum": 0			
 		}
 	},
 	"required": [
