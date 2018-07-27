@@ -46,7 +46,15 @@
 			"type": "array",
 			"items": {
 				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
-			}
+			},
+			"description": "Describes slots targeted when a product has been booked"
+		},
+		"dropzones": {
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+			},
+			"description": "Describes slots available on a product"
 		}
 	}
 }
