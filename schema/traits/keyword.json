@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/keywords.json",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/keyword.json",
 	"title": "Keywords trait",
 	"description": "An optional list of strings to target for an ad.",
 	"type": "object",

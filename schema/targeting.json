@@ -12,7 +12,10 @@
 			}
 		},
 		"keywords": {
-			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/keywords.json"
+			"type": "array",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/keyword.json"
+			}
 		},
 		"commercialNode": {
 			"oneOf": [
