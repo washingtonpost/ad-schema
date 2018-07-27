@@ -37,9 +37,6 @@
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"keywords": {
-					"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/keywords.json"
-				},
 				"articleIds": {
 					"type": "array",
 					"items": {
@@ -51,16 +48,15 @@
 					"items": {
 						"type": "string"
 					}
-				},
-				"brandSafetyLevel": {
-					"type": "number",
-					"minimum": 1,
-					"maximum": 10
 				}
 			}
 		},
 		"priority": {
 			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/priority.json"
 		}
-	}
+	},
+	"required": [
+		"products",
+		"exclusions"
+	]
 }
