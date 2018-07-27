@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/keyword.json",
+	"title": "Keywords trait",
+	"description": "An optional list of strings to target for an ad.",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"_id": {
+			"$ref": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.6.2/traits/trait_id.json"
+		},
+		"name": {
+			"type": "string"
+		},
+		"brandSafetyLevel": {
+			"type": "number",
+			"minimum": 1,
+			"maximum": 10,
+			"description": "The brand safety level of articles with this keyword must match or exceed the targeted brand safety level with 1 = least safe, 10 = safest. 10 assumed if this is not listed."
+		}
+	}
+}
