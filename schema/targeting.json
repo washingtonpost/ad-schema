@@ -33,6 +33,13 @@
 				"type": "string"
 			}
 		},
+		"slots": {
+			"type": "array",
+			"description": "Describes slots this campaign is booked against",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+			}
+		},
 		"exclusions": {
 			"type": "object",
 			"additionalProperties": false,

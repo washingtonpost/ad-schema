@@ -50,6 +50,13 @@
 		},
 		"priority": {
 			"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/priority.json"
+		},
+		"slots": {
+			"type": "array",
+			"description": "Describes slots this creative is booked against",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+			}
 		}
 	},
 	"required": [

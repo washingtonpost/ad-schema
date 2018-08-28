@@ -26,6 +26,13 @@
 		},
 		"templateComponent": {
 			"type": "string"
+		},
+		"slots": {
+			"type": "array",
+			"description": "Describes slots for which this creative is viable",
+			"items": {
+				"$ref": "https://raw.githubusercontent.com/washingtonpost/ad-schema/master/schema/traits/slot.json"
+			}
 		}
 	}
 }
